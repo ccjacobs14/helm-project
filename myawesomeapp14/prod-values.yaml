@@ -1,0 +1,9 @@
+azDeploy: amazon-deployment
+azApp: myawesomeapp14-prod
+namespace: prod
+replicas: 6
+containerName: amazon-container-prod
+image:
+  name: docker.io/ccjacobs14/nodejs_cli
+  tag: latest
+service: amazon-service-prod

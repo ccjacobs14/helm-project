@@ -1,0 +1,5 @@
+To get your application url
+
+run:
+
+kubectl get svc and grab your load balancer url and paste on your browser.

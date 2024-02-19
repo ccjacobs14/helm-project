@@ -1,0 +1,9 @@
+azDeploy: amazon-deployment
+azApp: myawesomeapp14-dev
+namespace: dev
+replicas: 5
+containerName: amazon-container-dev
+image:
+  name: docker.io/ccjacobs14/amazon
+  tag: 5
+service: amazon-service-dev
