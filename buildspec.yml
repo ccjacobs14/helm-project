@@ -13,17 +13,17 @@ phases:
     - chmod 700 get_helm.sh
     - ./get_helm.sh
     
- pre_build:
+  pre_build:
     commands:
     - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 698276559677.dkr.ecr.us-east-1.amazonaws.com
     - aws eks update-kubeconfig --name eks_cluster --region us-east-1
     
- build:
+  build:
     commands:
     - echo Build started on `date`
     - docker pull 698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp:$COMMIT_HASH
       
- post_build:
+  post_build:
     commands:
     - echo Pulling recent docker image on `date`
     #- docker pull 698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp:$COMMIT_HASH
