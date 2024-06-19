@@ -3,6 +3,6 @@ azApp: myawesomeapp14
 replicas: 3
 containerName: amazon-container
 image:
-  name: docker.io/ccjacobs14/amazon
-  tag: 5
+  name: 698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp
+  tag: latest
 service: amazon-service
