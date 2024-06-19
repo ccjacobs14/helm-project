@@ -2,5 +2,7 @@ azDeploy: amazon-deployment
 azApp: myawesomeapp14
 replicas: 3
 containerName: amazon-container
-image: CONTAINER_IMAGE
+image:
+  name: docker.io/ccjacobs14/amazon
+  tag: 5
 service: amazon-service
