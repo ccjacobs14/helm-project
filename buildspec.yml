@@ -28,4 +28,4 @@ phases:
     - echo Pulling recent docker image on `date`
     #- docker pull 698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp:$COMMIT_HASH
     #- helm install myawesomeapp14 ./myawesomeapp14 --values ./myawesomeapp14/values.yaml
-    - helm upgrade -i myawesomeapp14 myawesomeapp14 -f ./myawesomeapp14/values.yaml --set image.tag=$CODEBUILD_RESOLVED_SOURCE_VERSION
+    - helm upgrade -i myawesomeapp14 myawesomeapp14 -f ./myawesomeapp14/values.yaml --set image.tag=$LATEST
