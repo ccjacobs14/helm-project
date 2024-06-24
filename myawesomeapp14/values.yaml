@@ -2,8 +2,8 @@ azDeploy: amazon-deployment
 azApp: myawesomeapp14
 replicas: 3
 containerName: amazon-container
-image:
-  repository: 698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp
-  pullPolicy: IfNotPresent
-  tag: ""
+image: CONTAINER_IMAGE
+  # repository: 698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp
+  # pullPolicy: IfNotPresent
+  # tag: ""
 service: amazon-service
