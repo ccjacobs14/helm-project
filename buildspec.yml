@@ -26,6 +26,6 @@ phases:
   post_build:
     commands:
     - echo Pulling the latest docker image on `date`
-    - docker pull 698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp:latest
-    - sed -i 's@CONTAINER_IMAGE@'"698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp:latest"'@' ./myawesomeapp14/values.yaml
+    - docker pull 698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp:$CODEBUILD_RESOLVED_SOURCE_VERSION
+    - sed -i 's@CONTAINER_IMAGE@'"698276559677.dkr.ecr.us-east-1.amazonaws.com/nodejs-webapp:$CODEBUILD_RESOLVED_SOURCE_VERSION"'@' ./myawesomeapp14/values.yaml
     - helm upgrade -i myawesomeapp14 myawesomeapp14 -f ./myawesomeapp14/values.yaml #--set image.tag=#{SourceVariables.CommitId}
