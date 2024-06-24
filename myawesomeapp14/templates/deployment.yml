@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.containerName }}
-          image: "{{ .Values.image }}
+          image: {{ .Values.image }}
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
